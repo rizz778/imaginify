@@ -9,8 +9,8 @@ export interface Userr extends Document{
     photo:string;
     firstName?:string,
     lastName?:string,
-    PlanId?:Number,
-    creditBalnace?:Number
+    PlanId?:number,
+    creditBalnace?:number
 }
 const UserSchema=new Schema({
     clerkId:{type:String,required:true,unique:true},
