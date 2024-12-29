@@ -1,21 +1,25 @@
 /* eslint-disable no-unused-vars */
 
-// ====== USER PARAMS
 declare type CreateUserParams = {
-    clerkId: string;
-    email: string;
-    username: string;
-    firstName: string;
-    lastName: string;
-    photo: string;
-  };
-  
-  declare type UpdateUserParams = {
-    firstName: string;
-    lastName: string;
-    username: string;
-    photo: string;
-  };
+    clerkId: string;        // Required, string type
+    email: string;          // Required, string type
+    username: string;       // Required, string type
+    firstName?: string;     // Optional, string type (not required in schema)
+    lastName?: string;      // Optional, string type (not required in schema)
+    photo: string;          // Required, string type
+    planId?: number;        // Optional, number type, defaults to 1 in schema
+    creditBalance?: number; // Optional, number type, defaults to 10 in schema
+};
+
+declare type UpdateUserParams = {
+    firstName?: string;     // Optional, string type
+    lastName?: string;      // Optional, string type
+    username?: string;      // Optional, string type
+    photo?: string;         // Optional, string type
+    planId?: number;        // Optional, number type (can be updated)
+    creditBalance?: number; // Optional, number type (can be updated)
+};
+
   
   // ====== IMAGE PARAMS
   declare type AddImageParams = {
