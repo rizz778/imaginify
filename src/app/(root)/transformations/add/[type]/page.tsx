@@ -5,8 +5,9 @@ import TransformationForm from '@/app/components/shared/TransformationForm';
 import { getUserById } from '@/lib/actions/user.actions';
 import { auth } from '@clerk/nextjs/server'
 
-
+// eslint-disable-next-line no-unused-vars
 const AddTransformationTypePage = async ({ params: { id,type } }: SearchParamProps) => {
+
   // Pass the req object into getAuth() to get user authentication details
   const { userId, redirectToSignIn } = await auth()
 

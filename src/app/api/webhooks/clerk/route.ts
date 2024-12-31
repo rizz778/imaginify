@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+
 import { clerkClient } from "@clerk/clerk-sdk-node";
 import { WebhookEvent } from "@clerk/nextjs/server";
 import { headers } from "next/headers";
