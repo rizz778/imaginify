@@ -6,7 +6,7 @@ import { getUserById } from '@/lib/actions/user.actions';
 import { auth } from '@clerk/nextjs/server'
 
 
-const AddTransformationTypePage = async ({ params: { type } }: SearchParamProps) => {
+const AddTransformationTypePage = async ({ params: { id,type } }: SearchParamProps) => {
   // Pass the req object into getAuth() to get user authentication details
   const { userId, redirectToSignIn } = await auth()
 
