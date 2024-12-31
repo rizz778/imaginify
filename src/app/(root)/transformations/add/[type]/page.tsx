@@ -7,7 +7,7 @@ import { auth } from '@clerk/nextjs/server'
 
 // eslint-disable-next-line no-unused-vars
 const AddTransformationTypePage = async ({ params: { id,type } }: SearchParamProps) => {
-
+  console.log(id, type);
   // Pass the req object into getAuth() to get user authentication details
   const { userId, redirectToSignIn } = await auth()
 
