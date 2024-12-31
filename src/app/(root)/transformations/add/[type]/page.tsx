@@ -6,8 +6,8 @@ import { getUserById } from '@/lib/actions/user.actions';
 import { auth } from '@clerk/nextjs/server'
 
 // eslint-disable-next-line no-unused-vars
-const AddTransformationTypePage = async ({ params: { id,type } }: SearchParamProps) => {
-  console.log(id, type);
+const AddTransformationTypePage = async ({ params }: SearchParamProps) => {
+
   // Pass the req object into getAuth() to get user authentication details
   const { userId, redirectToSignIn } = await auth()
 
@@ -17,7 +17,7 @@ const AddTransformationTypePage = async ({ params: { id,type } }: SearchParamPro
   const user = await getUserById(userId);
 
   // Get the transformation type from the constant
-  const transformation = transformationTypes[type];
+  const transformation = transformationTypes[params.type];
 
   return (
     <>
