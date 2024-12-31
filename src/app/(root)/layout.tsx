@@ -13,7 +13,7 @@ const Layout = ({children}:{children:React.ReactNode}) => {
                  {children}
             </div>
         </div>
-        {children}</main>
+        </main>
     
   )
 }

@@ -4,7 +4,7 @@ import { WebhookEvent } from "@clerk/nextjs/server";
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 import { Webhook } from "svix";
-
+   
 import { createUser, deleteUser, updateUser } from "@/lib/actions/user.actions";
 
 export async function POST(req: Request) {
@@ -33,7 +33,7 @@ export async function POST(req: Request) {
   // Get the body
   const payload = await req.json();
   const body = JSON.stringify(payload);
-
+  console.log('Webhook Payload:', payload);
   // Create a new Svix instance with your secret.
   const wh = new Webhook(WEBHOOK_SECRET);
 
@@ -80,7 +80,10 @@ export async function POST(req: Request) {
         },
       });
     }
-
+    if (!newUser) {
+      console.error("Failed to save user to the database.");
+      return NextResponse.json({ message: "Database error" }, { status: 500 });
+    }
     return NextResponse.json({ message: "OK", user: newUser });
   }
 
