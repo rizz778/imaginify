@@ -17,7 +17,7 @@ const eslintConfig = [
       '@typescript-eslint/no-explicit-any': 'off', // Disable the 'any' rule
       'prefer-const': 'off', // Disable the 'prefer-const' rule
       'prefer-spread': 'off', // Disable the 'prefer-spread' rule
-      
+      "no-unused-vars": "off"
     },
   },
 ];
