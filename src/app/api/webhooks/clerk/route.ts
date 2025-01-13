@@ -60,14 +60,14 @@ export async function POST(req: Request) {
   // CREATE
   if (eventType === "user.created") {
     const { id, email_addresses, image_url, first_name, last_name, username } = evt.data;
-
+    console.log('Webhook Payload:', payload);
     const user = {
       clerkId: id,
       email: email_addresses[0].email_address,
       username: username!,
       firstName: first_name?? undefined,
       lastName: last_name?? undefined,
-      photo: image_url,
+      photo: image_url||"https://default-placeholder-image.com/photo.jpg",
     };
 
     const newUser = await createUser(user);
@@ -84,6 +84,7 @@ export async function POST(req: Request) {
       console.error("Failed to save user to the database.");
       return NextResponse.json({ message: "Database error" }, { status: 500 });
     }
+    console.log("User Created!!!")
     return NextResponse.json({ message: "OK", user: newUser });
   }
 
@@ -95,7 +96,7 @@ export async function POST(req: Request) {
       firstName: first_name?? undefined,
       lastName: last_name?? undefined,
       username: username!,
-      photo: image_url,
+      photo: image_url||"https://default-placeholder-image.com/photo.jpg",
     };
 
     const updatedUser = await updateUser(id, user);

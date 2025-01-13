@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 
 declare type CreateUserParams = {
     clerkId: string;        // Required, string type
@@ -124,9 +123,9 @@ declare type UpdateUserParams = {
   
   declare type TransformationFormProps = {
     action: "Add" | "Update";
-    userId: string;
+    userId:string
     type: TransformationTypeKey;
-    creditBalance: number;
+    creditBalance:number
     data?: IImage | null;
     config?: Transformations | null;
   };

@@ -78,7 +78,7 @@ export async function updateCredits(userId:string,creditFee:number){
 
         const updateUserCredits=await User.findOneAndUpdate(
             {_id:userId},
-        {$inc:{creditBlance:creditFee}},
+        {$inc:{creditBalance:creditFee}},
     {new:true})
     if(!updateUserCredits) throw new Error("User credits update failed");
 
