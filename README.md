@@ -63,9 +63,10 @@ Make sure you have the following installed on your machine:
    ```bash
    git clone https://github.com/rizz778/imaginify.git
 
-2. **Installation**:
+2. **Installation**
+   ```bash
    npm run dev
-3. **Set up environment variables**:
+4. **Set up environment variables**:
    Create a .env file in the backend directory and add the following:
    ```bash
    #NEXT
