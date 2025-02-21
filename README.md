@@ -65,10 +65,13 @@ Make sure you have the following installed on your machine:
 git clone https://github.com/rizz778/imaginify.git
 cd imaginify
 
-2. **Installation
+### Installation
+```bash
    npm run dev
-3. **Set up environment variables**:
-   #NEXT
+
+### Environment Variables
+```bash
+#NEXT
 NEXT_PUBLIC_SERVER_URL=
 
 #MONGODB
