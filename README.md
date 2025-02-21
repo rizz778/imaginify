@@ -1,4 +1,4 @@
- Imaginify | GenAI Image Processing SaaS Platform 🖼️✨
+## Imaginify | GenAI Image Processing SaaS Platform 🖼️✨
 
 ## Overview 📝  
 **Imaginify** is a powerful AI-driven image processing platform that offers advanced image restoration, recoloring, object removal, generative fill, and background removal. Users can securely authenticate, manage their image transformations using a credit-based system, and leverage efficient image storage and search functionalities.
@@ -51,7 +51,7 @@
 
 Follow these steps to set up the project locally on your machine.
 
-### Prerequisites
+## Prerequisites
 
 Make sure you have the following installed on your machine:
 
@@ -59,25 +59,21 @@ Make sure you have the following installed on your machine:
 - **Node.js**
 - **npm** (Node Package Manager)
 
-### Cloning the Repository
+## Cloning the Repository
 
 ```bash
 git clone https://github.com/rizz778/imaginify.git
 cd imaginify
 
-### Installation
+## Installation
 ```bash
    npm run dev
 
-### Environment Variables
+## Environment Variables
 ```bash
-#NEXT
+
 NEXT_PUBLIC_SERVER_URL=
-
-#MONGODB
 MONGODB_URL=
-
-#CLERK
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
 CLERK_SECRET_KEY=
 WEBHOOK_SECRET=
@@ -87,12 +83,11 @@ NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 
-#CLOUDINARY
+
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
 CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=
 
-#STRIPE
 STRIPE_SECRET_KEY=
 STRIPE_WEBHOOK_SECRET=
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
