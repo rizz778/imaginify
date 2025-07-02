@@ -26,7 +26,7 @@ const Home = async ({ searchParams}:SearchParamProps) => {
             <li>
               <Image src={link.icon} alt="image" width={24} height={24}/>
             </li>
-            <p className='p-14-medium text-center tetx-white'>{link.label}</p>
+            <p className='p-14-medium text-center text-white'>{link.label}</p>
           </Link>
         ))}
       </ul>
